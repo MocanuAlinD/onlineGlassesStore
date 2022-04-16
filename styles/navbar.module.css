@@ -52,11 +52,11 @@
   margin: 0;
 }
 .nav ul li:last-child img {
-  height: 2.2rem;
-  width: 2.2rem;
-  border: 0.1rem solid var(--color-primary-lighten2);
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
-  transition: var(--transition);
+  /* transition: var(--transition); */
+  margin-left: .5rem;
 }
 
 .nav ul li a {

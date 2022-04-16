@@ -110,8 +110,6 @@ const Recenzii = () => {
               <button onClick={postData}>Posteaza</button>
             </div>
           </div>
-          {/* <h4>{session.user.email}</h4> */}
-          {/* <h4>{session.user.name}</h4> */}
         </div>
       )}
     </div>

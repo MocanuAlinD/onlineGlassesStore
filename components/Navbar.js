@@ -92,7 +92,7 @@ const Navbar = ({ totalItems }) => {
 
         {session && (
           <li>
-            <img src={session.user.image} alt="" />
+            <img src={session.user.image} alt="user image" />
             <Link href="/">
               <a onClick={() => (signOut(), closeMenu())}>Log out</a>
             </Link>
