@@ -32,27 +32,27 @@ const Navbar = ({ totalItems }) => {
   };
 
   const changeTheme = () => {
-    const item = localStorage.getItem('theme')
-    if(item === 'false'){
-      document.body.classList.value = 'dark'
-      localStorage.setItem('theme', true)
-      setThemeIcon(false)
+    const item = localStorage.getItem("theme");
+    if (item === "false") {
+      document.body.classList.value = "dark";
+      localStorage.setItem("theme", true);
+      setThemeIcon(false);
     } else {
-      document.body.classList.value = ''
-      localStorage.setItem('theme', false)
-      setThemeIcon(true)
+      document.body.classList.value = "";
+      localStorage.setItem("theme", false);
+      setThemeIcon(true);
     }
   };
 
   useEffect(() => {
     try {
       if (localStorage.getItem("theme") !== null) {
-        if (localStorage.getItem("theme") === 'true') {
+        if (localStorage.getItem("theme") === "true") {
           document.body.classList.value = "dark";
-          setThemeIcon(false)
-        } else if (localStorage.getItem("theme") === 'false') {
+          setThemeIcon(false);
+        } else if (localStorage.getItem("theme") === "false") {
           document.body.classList.value = "";
-          setThemeIcon(true)
+          setThemeIcon(true);
         }
       } else {
         localStorage.setItem("theme", false);
@@ -66,7 +66,10 @@ const Navbar = ({ totalItems }) => {
   return (
     <div className={style.nav} id="nav">
       <div className={style.nav__title}>
-        <h3>HORUS TOP OPTIC</h3>
+        <Link href="/">
+          {/* <a onClick={closeMenu}>Acasa</a> */}
+          <h3>HORUS TOP OPTIC</h3>
+        </Link>
       </div>
       <ul>
         <li>

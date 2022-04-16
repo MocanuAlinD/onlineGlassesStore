@@ -10,9 +10,9 @@
 }
 
 .pagination__pickToShow label {
-  color: var(--color-primary-light);
+  color: var(--color-primary-lighten1);
   font-family: var(--font-family-poppins);
-  margin-right: 0.2rem;
+  margin-right: 0.5rem;
 }
 
 .pagination__pickToShow select {

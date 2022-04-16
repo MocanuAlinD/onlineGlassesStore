@@ -50,9 +50,9 @@ export const Mission = styled.div`
 // h3 title
 export const Title = styled.h3`
   color: var(--color-primary-lighten1);
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-w400);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -144,10 +144,10 @@ export const Cards = styled.div`
 // h3 card title
 export const CardTitle = styled.h3`
   color: var(--color-primary-lighten1);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-family: var(--font-family-poppins);
-  font-weight: var(--font-w600);
+  font-weight: var(--font-400);
   display: flex;
   justify-content: space-between;
 `;

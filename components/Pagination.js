@@ -15,7 +15,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, changeShow }) => {
           value={postsPerPage}
           onChange={(e) => changeShow(e.target.value)}
         >
-          {/* <option value='5'>5</option> */}
+          <option value="5">5</option>
           <option value="10">10</option>
           <option value="20">20</option>
           <option value="50">50</option>
@@ -25,7 +25,6 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, changeShow }) => {
 
       {pageNumbers.map((number, i) => (
         <button
-          // className="pagination__button"
           className={`pagination__button ${i === 0 ? "active" : ""}`}
           onClick={(e) => paginate(e, number)}
           key={number}

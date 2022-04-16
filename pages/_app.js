@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       <SessionProvider session={session}>
         <GlobalStyle />
         <Head>
-          <title>Horus Top Optic</title>
+          <title>Online Glasses Store</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"

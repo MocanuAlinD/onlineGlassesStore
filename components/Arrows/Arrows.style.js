@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 
 export const Wrapper = styled.div`
-    width: fit-content;
     display: flex;
     transition: var(--transition);
+    width: fit-content;
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
 `
 
 export const Arrow_1 = styled.div`

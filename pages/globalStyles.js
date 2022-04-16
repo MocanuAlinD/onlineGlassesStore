@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,8 @@ body {
   --color-primary-dark1: #151515;    // gray
   --color-primary-dark2: #242423;   // gray
   --color-primary-dark2op: #24242388; // gray opacity 88
-  --color-primary-light: #f5cb5c;   // some yellow
+  /* --color-primary-light: #f5cb5c;   // some yellow */
+  --color-primary-light: #e9c46a;   // some yellow
   --color-primary-lighten1: #e8eddf;  // some white
   --color-primary-lighten2: #e8eddf70; // some white opacity 70
   /* --color-primary-blue: #1a73e8; // blue */
@@ -20,6 +20,7 @@ body {
   --color-primary-blueHover: #303f9f; // blue hover
   --color-primary-darkblue: #00509d; // blue
   --color-extra-light: #ffffff44; // white opacity 18
+  --color-nav: #0b090a;
   --font-family-cinzel: 'Cinzel Decorative', cursive;
   --font-family-poppins: 'Poppins', sans-serif;
   --font-w200: 200;
@@ -28,28 +29,22 @@ body {
   --font-w800: 800;
   --transition: all .35s ease-in-out;
   --minheight: calc(100vh - 17rem);
-  width: 100%;
   background: var(--color-primary-dark2);
   height: fit-content;
   min-height: 100vh;
-  background-image: url('/bg13.jpg');
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: content-box;
   scroll-behavior: smooth;
   transition: var(--transition);
+  width: 100%;
 }
 
 body.dark {
   --color-primary-dark1: #f8f9fa;    // gray
   --color-primary-dark2: #f5f3f4;   // gray
   --color-primary-dark2op: #e9ecef88; // gray opacity 88
-  /* --color-primary-light: #f95738;   // some yellow */
-  /* --color-primary-light: #f95738;   // some yellow */
-  /* --color-primary-light: #0077b6;   // some yellow */
-  --color-primary-light: #0081a7;   // some yellow
+  /* --color-primary-light: #f95738;   // some orange */
+  /* --color-primary-light: #0077b6;   // some blue */
+  /* --color-primary-light: #0081a7;   // some blue */
+  --color-primary-light: #457b9d;   // some blue
   --color-primary-lighten1: #151515;  // some white
   --color-primary-lighten2: #24242388; // some white opacity 70
   /* --color-primary-blue: #1a73e8; // blue */
@@ -57,6 +52,7 @@ body.dark {
   --color-primary-blueHover: #303f9f; // blue hover
   /* --color-extra-light: #24242388; // white opacity 18 */
   --color-extra-light: #00000044; // white opacity 18
+  --color-nav: #e9ecef;
   --font-family-cinzel: 'Cinzel Decorative', cursive;
   --font-family-poppins: 'Poppins', sans-serif;
   --font-w200: 200;
@@ -66,15 +62,9 @@ body.dark {
   --transition: all .35s ease-out;
   --minheight: calc(100vh - 17rem);
   width: 100%;
-  background: var(--color-primary-dark2);
+  /* background-color: var(--color-primary-dark1); */
   height: fit-content;
   min-height: 100vh;
-  background-image: url('/bgLight1.jpg');
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: content-box;
   scroll-behavior: smooth;
   transition: var(--transition);
 }
