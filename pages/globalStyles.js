@@ -35,6 +35,12 @@ body {
   scroll-behavior: smooth;
   transition: var(--transition);
   width: 100%;
+  background-image: url('/bg13.jpg');
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 
 body.dark {
@@ -67,6 +73,12 @@ body.dark {
   min-height: 100vh;
   scroll-behavior: smooth;
   transition: var(--transition);
+  background-image: url('/bgLight1.jpg');
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 
 a {
