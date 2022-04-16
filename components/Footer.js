@@ -84,7 +84,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footer__right}>
-        <Link href="#">
+        <Link href="/inainte">
           <a>Inainte sa cumperi !</a>
         </Link>
         <Link href="/PoliticaDeConfidentialitate">
@@ -93,8 +93,8 @@ const Footer = () => {
         <Link href="/Garantie">
           <a>Garantie</a>
         </Link>
-        <h4>CUI: 40666971</h4>
-        <h4>J13/856/2019</h4>
+        <h4>CUI: 30762979</h4>
+        <h4>J12/462/2022</h4>
       </div>
 
       <div className={styles.footer__commentsContainer}>

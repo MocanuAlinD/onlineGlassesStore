@@ -14,7 +14,7 @@ const Garantie = () => {
                 In final veti putea fi sigur de alegerea pe care ati facut-o si va veti putea bucura de ochelarii noi achizitionati pentru o perioada lunga de timp.
                 Alaturi de garantia clasica oferita de catre HORUS TOP OPTIC adaugam <strong>„garantia orice ar fi”</strong>. Prin aceasta garantie puteti fi sigur de achizitia facuta – daca nu vedeti cu ochelarii nostri!
                 La noi orice problema isi gaseste rezolvarea.</p>
-            <p>&emsp;&emsp;Va asteptam sa ne contactati pe e-mail: <strong>horus_top_optic@yahoo.com</strong> si la numarul de telefon: <strong>0742.654.258</strong> cu si mai multe informatii. <br/>Am optat pentru aceasta metoda tocmai pentru a fi mereu aproape de dumneavoatra fara a va deplasa. Stim ca timpul este scurt/incarcat si niciodata nu avem timp de noi tocmai de aceea venim noi la dumneavoatra.</p>
+            <p>&emsp;&emsp;Va asteptam sa ne contactati pe e-mail: <strong>demoEmail@yahoo.com</strong> si la numarul de telefon: <strong>0721.123.123</strong> cu si mai multe informatii. <br/>Am optat pentru aceasta metoda tocmai pentru a fi mereu aproape de dumneavoatra fara a va deplasa. Stim ca timpul este scurt/incarcat si niciodata nu avem timp de noi tocmai de aceea venim noi la dumneavoatra.</p>
         </div>
     );
 }
