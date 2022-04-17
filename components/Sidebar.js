@@ -63,7 +63,7 @@ const Sidebar = ({
               value={src}
             />
           </div>
-          <div className={styles.searchButtons + " gap-3 py-1 pb-2 d-flex justify-content-end justify-content-md-between"}>
+          <div className={styles.searchButtons + " p-0 m-0 pb-1 pb-md-0 gap-3 d-flex justify-content-end justify-content-md-between"}>
             <button
               className={styles.searchSterge}
               onClick={removeSearch}

@@ -7,16 +7,16 @@ import Link from "next/link";
 import { FiMoreHorizontal } from "react-icons/fi";
 
 const MiniCard = ({ produs, onAddToCart }) => {
-
   return (
-    <div className={styles.miniCard__container}>
+    <div className={styles.miniCard__container + " d-flex flex-column p-1 m-2 mt-3"}>
       <Image
         layout="intrinsic"
         priority
         as="image"
         src={produs.imgUrl.slice(20)}
-        width={384}
-        height={216}
+        width={768}
+        height={432}
+        className={styles.image}
       />
       <h4>{produs.name}</h4>
       <h5 className={styles.miniCard__pret}>
@@ -24,15 +24,15 @@ const MiniCard = ({ produs, onAddToCart }) => {
       </h5>
 
       <hr className={styles.miniCard__divider} />
-      <h5>
+      <h5 className={styles.h5tag}>
         {!produs.inventory.managed ? (
-          <span>In stoc</span>
+          "In stoc"
         ) : produs.inventory.available < 1 ? (
-          <span>Doar cu precomanda</span>
+          "Doar cu precomanda"
         ) : produs.inventory.available < 4 ? (
-          <span>Stoc limitat</span>
+          "Stoc limitat"
         ) : (
-          <span>In stoc</span>
+          "In stoc"
         )}{" "}
       </h5>
 
@@ -64,9 +64,6 @@ const MiniCard = ({ produs, onAddToCart }) => {
           <a target="_blank">
             <FiMoreHorizontal title="Vezi detalii produs" />
           </a>
-          {/* <a target="_blank"> */}
-          {/* <sup>...</sup> */}
-          {/* </a> */}
         </Link>
       </div>
     </div>
