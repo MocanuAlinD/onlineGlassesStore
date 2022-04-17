@@ -64,14 +64,24 @@ const Navbar = ({ totalItems }) => {
   }, []);
 
   return (
-    <div className={style.nav} id="nav">
-      <div className={style.nav__title}>
+    <div
+      className={
+        style.nav +
+        " m-0 p-0 d-flex justify-content-center align-items-center position-sticky top-0"
+      }
+      id="nav"
+    >
+      <div
+        className={
+          style.nav__title +
+          " m-0 p-0 h-100 d-flex align-items-center ps-3 flex-grow-1"
+        }
+      >
         <Link href="/">
-          {/* <a onClick={closeMenu}>Acasa</a> */}
-          <h3>HORUS TOP OPTIC</h3>
+          <h3 className="h-auto m-0 p-0">HORUS TOP OPTIC</h3>
         </Link>
       </div>
-      <ul>
+      <ul className="d-flex flex-grow-1 m-0 p-0 flex-column flex-md-row align-items-start justify-content-start justify-content-md-end gap-4 pt-5 pt-md-0 ">
         <li>
           <Link href="/">
             <a onClick={closeMenu}>Acasa</a>
@@ -109,9 +119,11 @@ const Navbar = ({ totalItems }) => {
           </li>
         )}
       </ul>
-      <button className={style.nav__menu} onClick={changeMe}>
-        Meniu
-      </button>
+      <div className="">
+        <button className={style.nav__menu + " m-0 w-auto"} onClick={changeMe}>
+          Meniu
+        </button>
+      </div>
       <div className={style.nav__cartContainer}>
         {router.pathname !== "/Cart" && router.pathname !== "/Checkout" && (
           <Link href="/Cart">

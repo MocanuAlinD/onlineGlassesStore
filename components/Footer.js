@@ -56,10 +56,18 @@ const Footer = () => {
 
 
   return (
-    <div className={styles.footer__container}>
-      <div className={styles.footer__middle}>
-        <h3>Despre</h3>
-        <hr width="100%" style={{ height: ".1rem", marginBottom: ".5rem" }} />
+    <div className={styles.footer__container + " m-0 p-0 d-flex flex-column mx-auto px-4 py-1 w-100 flex-md-row justify-content-md-center"}>
+      <div className={styles.footer__left}>
+        <h3 className='w-100 text-center text-md-start'>Despre</h3>
+        {/* <hr width="100%" style={{ height: ".1rem", marginBottom: ".5rem" }} /> */}
+        <hr
+          style={{
+            width: "100%",
+            height: ".1rem",
+            backgroundColor: 'var(--color-primary-lighten1)',
+            marginBottom: ".5rem",
+          }}
+        />
         <Link href="/istoriaochelarilor">
           <a>Istoria ochelarilor de vedere</a>
         </Link>
@@ -83,7 +91,7 @@ const Footer = () => {
         </Link>
       </div>
 
-      <div className={styles.footer__right}>
+      <div className={styles.footer__middle + " m-0 p-0 pt-5"}>
         <Link href="/inainte">
           <a>Inainte sa cumperi !</a>
         </Link>

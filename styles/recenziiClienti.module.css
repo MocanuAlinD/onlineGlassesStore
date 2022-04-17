@@ -1,9 +1,9 @@
 .container {
-  min-height: var(--minheight);
+  /* min-height: var(--minheight); */
   /* background: coral; */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: flex-start; */
   font-family: var(--font-family-poppins);
 }
 .container h4,

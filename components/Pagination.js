@@ -8,9 +8,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, changeShow }) => {
     pageNumbers.push(i);
   }
   return (
-    <div className={style.pagination__container}>
+    <div className={style.pagination__container + " d-flex m-0 p-0 justify-content-center py-1 pt-3"}>
       <div className={style.pagination__pickToShow}>
-        <label>Afiseaza</label>
+        <label className='me-3'>Afiseaza</label>
         <select
           value={postsPerPage}
           onChange={(e) => changeShow(e.target.value)}

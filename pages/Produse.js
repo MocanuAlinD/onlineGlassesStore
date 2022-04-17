@@ -17,10 +17,10 @@ export async function getStaticProps() {
     category_slug: "2",
     sortBy: "created",
   });
-  
+
   const products = [];
   const both = [...products_1, ...products_2];
-  
+
   both.map((item) => {
     const tempItem = {
       id: item.id,
@@ -33,10 +33,10 @@ export async function getStaticProps() {
     };
     products.push(tempItem);
   });
-  
+
   // const products = JSON.stringify(tempList);
   // const products = tempList;
-  
+
   return {
     props: {
       products,
@@ -198,30 +198,27 @@ const Produse = ({ onAddToCart, products }) => {
   };
 
   return (
-    <div className={styles.produse__container} id="top">
+    <div className={styles.produse__container + " h-100"} id="top">
       <Head>
         <title>Produse</title>
       </Head>
 
-      <div className={styles.produse__wrapper}>
-        <div className={styles.produse__sidebar}>
-          <Sidebar
-            brand={brand}
-            brandNames={brandNames}
-            changeCat={(cat) => changecat(cat)}
-            changePriceName={changePriceName}
-            setSearch={setSearch}
-            setBrand={setBrand}
-            setBrandNames={setBrandNames}
-            brandNameVedere={brandNameVedere}
-            brandNameSoare={brandNameSoare}
-          />
-        </div>
+      <div className={styles.produse__wrapper + " w-100 d-flex flex-column flex-md-row p-0 m-0 "}>
+        <Sidebar
+          brand={brand}
+          brandNames={brandNames}
+          changeCat={(cat) => changecat(cat)}
+          changePriceName={changePriceName}
+          setSearch={setSearch}
+          setBrand={setBrand}
+          setBrandNames={setBrandNames}
+          brandNameVedere={brandNameVedere}
+          brandNameSoare={brandNameSoare}
+        />
 
-        <div className={styles.produse__list}>
+        <div className={styles.produse__list + " flex-grow-1"}>
           {search === "" && brand === "marcaAll" && (
             <Pagination
-              className={styles.produse__pagination}
               setPostsPerPage={setPostsPerPage}
               postsPerPage={postsPerPage}
               totalPosts={currentPosts}
@@ -231,22 +228,35 @@ const Produse = ({ onAddToCart, products }) => {
           )}
 
           {search !== "" && (
-            <h3 className={styles.produse__searchResult}>
+            <h3
+              className={
+                styles.produse__searchResult + " m-0 p-0 my-4 text-center"
+              }
+            >
               {searchItems().length}{" "}
               {searchItems().length === 1 ? "produs" : "produse"}{" "}
               {searchItems().length === 1 ? "gasit" : "gasite"}
             </h3>
           )}
           {/* Products */}
-          {search === "" &&
-            changeBrand(allProducts).map((prd) => (
-              <MiniCard onAddToCart={onAddToCart} key={prd.id} produs={prd} />
-            ))}
-          {search !== ""
-            ? searchItems().map((prd) => (
+          <div className="m-0 p-0 d-flex flex-wrap justify-content-center justify-content-md-start">
+            {search === "" &&
+              changeBrand(allProducts).map((prd) => (
                 <MiniCard onAddToCart={onAddToCart} key={prd.id} produs={prd} />
-              ))
-            : []}
+              ))}
+          </div>
+
+          <div className="m-0 p-0 d-flex flex-wrap">
+            {search !== ""
+              ? searchItems().map((prd) => (
+                  <MiniCard
+                    onAddToCart={onAddToCart}
+                    key={prd.id}
+                    produs={prd}
+                  />
+                ))
+              : []}
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,5 @@
 .footer__container {
-  width: 100%;
-  height: fit-content;
-  min-height: 14rem;
   background: var(--color-primary-dark1);
-  display: flex;
-  justify-content: center;
-  padding: 0 1rem 1rem;
-  padding-bottom: 0;
   user-select: none;
   border-top: 1px solid var(--color-primary-lighten2);
   transition: var(--transition);
@@ -17,33 +10,30 @@
 }
 
 
-.footer__middle,
-.footer__right{
+.footer__left,
+.footer__middle{
   width: fit-content;
   min-width: 15rem;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 0.2rem;
+  margin: 0 0.5rem;
+  padding: .3rem;
 }
 
 .footer__container h3 {
   color: var(--color-primary-lighten1);
-}
-
-/* LEFT FOOTER ===================================== */
-
-.footer__middle h3,
-.footer__right h3 {
+  font-size: 1.1rem;
   font-family: var(--font-family-poppins);
   font-weight: var(--font-w400);
 }
 
 
-/* MIDDLE FOOTER ===================================== */
-.footer__middle a {
+/* Despre */
+/* LEFT FOOTER ===================================== */
+.footer__left a {
   color: var(--color-primary-lighten1);
   font-size: 0.8rem;
   font-family: var(--font-family-poppins);
@@ -51,11 +41,11 @@
 }
 
 /* RIGHT FOOTER ===================================== */
-.footer__right {
+.footer__middle {
   padding-top: 2rem;
 }
 
-.footer__right a:first-child {
+.footer__middle a:first-child {
   margin-top: 0.5rem;
   color: var(--color-primary-lighten1);
   animation: onoff 2s linear infinite;
@@ -71,7 +61,7 @@
   }
 }
 
-.footer__right a {
+.footer__middle a {
   color: var(--color-primary-lighten1);
   font-size: 0.8rem;
   font-family: var(--font-family-poppins);
@@ -79,7 +69,7 @@
   margin-bottom: 1rem;
 }
 
-.footer__right h4 {
+.footer__middle h4 {
   color: var(--color-primary-lighten1);
   font-size: 1rem;
   font-family: var(--font-family-poppins);
@@ -217,18 +207,18 @@
     flex-direction: column;
     align-items: center;
   }
+  .footer__left,
   .footer__middle,
-  .footer__right,
   .footer__commentsContainer{
     width: 100%;
   }
 
-  .footer__right {
+  .footer__middle {
     padding-bottom: 1.5rem;
   }
 
-  .footer__middle a,
-  .footer__right a {
+  .footer__left a,
+  .footer__middle a {
     font-size: 1.1rem;
   }
 

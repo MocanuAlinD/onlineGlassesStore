@@ -1,24 +1,9 @@
-.container{
-  /* height: fit-content; */
-  min-height: var(--minheight);
-  display: flex;
-  padding: 1rem;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  
-}
-
 .container .img{
   display: none;
 }
 
 
 @media screen and (max-width: 768px){
-  .container{
-    padding: .5rem;
-    flex-direction: column;
-  }
   .container .img{
     display: flex;
     width: fit-content;

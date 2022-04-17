@@ -1,16 +1,16 @@
 .container{
-    width: 50%;
-    height: 100%;
+    /* width: 50%; */
+    /* height: 100%; */
     /* padding-top: 2rem; */
     /* padding-left: 1rem; */
     /* padding-right: 1rem; */
-    padding: 2rem 1rem 0rem;
+    /* padding: 2rem 1rem 0rem; */
     /* background: var(--color-extra-light); */
     background: var(--color-primary-dark2op);
     backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    margin: 2rem auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: 2rem auto; */
 }
 
 .container h4,

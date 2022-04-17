@@ -1,0 +1,172 @@
+.mission {
+  width: min(100%, 30rem);
+  height: 3rem;
+  background: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  margin-top: 0.2rem;
+  border-radius: 0.3rem;
+  border-left: 1px solid var(--color-primary-lighten2);
+  border-bottom: 1px solid var(--color-primary-lighten2);
+  transition: all 0.35s ease-in-out;
+  user-select: none;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+.mission:hover {
+  height: 23rem;
+}
+
+.mission ul {
+  padding-left: 1rem;
+  transition: all 0.35s ease-in-out;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.mission:hover ul {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.mission ul li {
+  color: var(--color-primary-lighten1);
+  font-family: var(--font-family-poppins);
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.mission h3 {
+  color: var(--color-primary-lighten1);
+  font-size: 1.2rem;
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-w400);
+}
+
+.cards {
+  height: 3rem;
+  width: min(100%, 30rem);
+  border-left: 1px solid var(--color-primary-lighten2);
+  border-bottom: 1px solid var(--color-primary-lighten2);
+  border-radius: 0.3rem;
+  transition: all 0.35s ease-in-out;
+  user-select: none;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+.cards:hover {
+  height: 11rem;
+}
+.cards a {
+  color: var(--color-primary-dark2);
+  font-family: var(--font-family-poppins);
+  font-size: 1rem;
+  width: fit-content;
+  padding: 0 0.2rem;
+  margin: 0.2rem;
+  background: var(--color-primary-light);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+
+.cards a:hover {
+  background: var(--color-primary-dark2);
+  color: var(--color-primary-light);
+  border-bottom: 1px solid var(--color-primary-light);
+}
+
+.cards .forHide {
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.cards:hover .forHide {
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.cards .forHide {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(100%);
+  transition: all 0.35s ease-in-out;
+}
+
+.cards .cardTitle {
+  color: var(--color-primary-lighten1);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-400);
+  display: flex;
+  justify-content: space-between;
+}
+.cards h4 {
+  color: var(--color-primary-lighten1);
+  font-family: var(--font-family-poppins);
+  font-size: 0.9rem;
+  font-weight: var(--font-w200);
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.cards .cardButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  padding-bottom: 0.5rem;
+}
+
+.cards .cardButton a {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .mission {
+    height: fit-content;
+  }
+  .mission:hover {
+    height: fit-content;
+  }
+  .mission ul {
+    transform: none;
+    opacity: 1;
+  }
+  .cards .forHide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(0);
+    transition: all 0.35s ease-in-out;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mission {
+    height: fit-content;
+  }
+  .mission:hover {
+    height: fit-content;
+  }
+  .mission ul {
+    transform: none;
+    opacity: 1;
+  }
+  .cards{
+    height: fit-content;
+  }
+  .cards:hover{
+    height: fit-content;
+  }
+  .cards .forHide{
+    transform: none;
+    opacity: 1;
+  }
+}

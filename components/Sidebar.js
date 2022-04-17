@@ -48,11 +48,10 @@ const Sidebar = ({
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.mobile}>
+    <div className={styles.container + " p-2 m-0 m-md-3"}>
         {/* Search */}
         <div className={styles.mobile__items + " " + styles.mobile__search}>
-          <div className={styles.searchContainer}>
+          <div className={styles.searchContainer + " pb-2"}>
             <AiOutlineSearch className={styles.searchIconDrop} />
             <input
               placeholder="Cauta..."
@@ -64,7 +63,7 @@ const Sidebar = ({
               value={src}
             />
           </div>
-          <div className={styles.searchButtons}>
+          <div className={styles.searchButtons + " gap-3 py-1 pb-2 d-flex justify-content-end justify-content-md-between"}>
             <button
               className={styles.searchSterge}
               onClick={removeSearch}
@@ -135,7 +134,6 @@ const Sidebar = ({
           </select>
         </div>
        
-      </div>
     </div>
   );
 };

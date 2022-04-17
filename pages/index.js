@@ -4,10 +4,10 @@ import Card1 from "../components/Card1";
 
 export default function Home({ allIndexData }) {
   return (
-    <div className={styles.container}>
-      <div className={styles.img}>
+    <div className={styles.container + " h-100 d-flex flex-column flex-md-row justify-content-md-end align-items-md-center"}>
+      <div className={styles.img + " d-flex d-md-none m-0 p-0 m-2 mt-4"}>
         <img src="/bg1_169.jpg" alt="BackgroundImage" />
-        <h4>Noi avem grija de ochii dumneavoastra!</h4>
+        <h4 className='m-0 p-0'>Noi avem grija de ochii dumneavoastra!</h4>
       </div>
       <Card1 indexData={allIndexData} />
     </div>
@@ -26,3 +26,26 @@ Home.getInitialProps = async () => {
 
   return { allIndexData };
 };
+
+{
+  /* <div
+      className={
+        styles.container + " bg-dark m-0 p-0 d-flex"
+      }
+    >
+      <h4 className="text-white bg-danger">Alin</h4>
+      {/* <div className={styles.img}> */
+}
+{
+  /* <img src="/bg1_169.jpg" alt="BackgroundImage" /> */
+}
+{
+  /* <h4>Noi avem grija de ochii dumneavoastra!</h4> */
+}
+{
+  /* </div> */
+}
+{
+  /* <Card1 indexData={allIndexData} /> */
+}
+// </div>

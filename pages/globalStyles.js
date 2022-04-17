@@ -30,8 +30,8 @@ body {
   --transition: all .35s ease-in-out;
   --minheight: calc(100vh - 17rem);
   background: var(--color-primary-dark2);
-  height: fit-content;
-  min-height: 100vh;
+  /* height: fit-content; */
+  /* min-height: 100vh; */
   scroll-behavior: smooth;
   transition: var(--transition);
   width: 100%;
@@ -39,7 +39,7 @@ body {
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-origin: content-box;
 }
 
@@ -69,15 +69,15 @@ body.dark {
   --minheight: calc(100vh - 17rem);
   width: 100%;
   /* background-color: var(--color-primary-dark1); */
-  height: fit-content;
-  min-height: 100vh;
+  /* height: fit-content; */
+  /* min-height: 100vh; */
   scroll-behavior: smooth;
   transition: var(--transition);
   background-image: url('/bgLight1.jpg');
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-origin: content-box;
 }
 
