@@ -34,9 +34,6 @@ export async function getStaticProps() {
     products.push(tempItem);
   });
 
-  // const products = JSON.stringify(tempList);
-  // const products = tempList;
-
   return {
     props: {
       products,
