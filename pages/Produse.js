@@ -191,11 +191,10 @@ const Produse = ({ onAddToCart, products }) => {
   };
 
   return (
-    <div className={styles.produse__container + " h-100 w-100"} id="top">
+    <div className={styles.produse__container + " w-100 mt-2 align-self-start"} id="top">
       <Head>
         <title>Produse</title>
       </Head>
-
       <div
         className={
           styles.produse__wrapper + " d-flex flex-column flex-md-row p-0 m-0"

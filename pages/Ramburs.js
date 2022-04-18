@@ -11,13 +11,14 @@ const Ramburs = ({ cart, onEmptyCart }) => {
   }
 
   return (
-    <div className={styles.ramburs__container}>
+    <div className={styles.ramburs__container + " m-0 p-0 d-flex justify-content-center align-items-center w-100 py-4"}>
       <form
         // action="https://formsubmit.co/alin_ngt@yahoo.com"
         action="https://formsubmit.co/81b98d1d934c3b7f0e32bc02eb386532"
         // action="https://formsubmit.co/alin_ngt@yahoo.com"
         method="POST"
         onSubmit={onEmptyCart}
+        className='m-0 p-0 p-3 d-flex flex-column'
       >
         {/* Products list - is invisible */}
         <textarea

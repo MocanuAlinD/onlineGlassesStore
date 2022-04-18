@@ -20,7 +20,7 @@ const RecenziiClienti = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container + " w-100 align-self-start d-flex justify-content-center align-items-start"}>
       <div className={styles.reviewsContainer}>
         <h4 className={styles.title}>Parerea clientilor</h4>
         <div className={styles.reviewsCards}>

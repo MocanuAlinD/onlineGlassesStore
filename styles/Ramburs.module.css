@@ -1,10 +1,4 @@
 .ramburs__container {
-  /* width: 100%; */
-  /* height: fit-content; */
-  /* min-height: 79vh; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   background: var(--color-primary-dark2op);
   backdrop-filter: blur(5px);
 }
@@ -15,15 +9,9 @@
   border-top-right-radius: .3rem;
   border-bottom-left-radius: .3rem;
   border-bottom-right-radius: .3rem;
-  display: flex;
-  flex-direction: column;
   font-family: var(--font-family-poppins);
-  max-width: 40rem;
-  margin: 0.5rem 0;
-  padding: 2rem;
-  width: 50%;
+  width: min(50%, 40rem);
   transition: var(--transition);
-  border: .1rem solid var(--color-primary-lighten2);
 }
 
 .ramburs__container form textarea {

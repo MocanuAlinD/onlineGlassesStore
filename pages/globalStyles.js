@@ -36,7 +36,6 @@ body {
   /* min-height: 100vh; */
   scroll-behavior: smooth;
   transition: var(--transition);
-  width: 100%;
   background-image: url('/bg13.jpg');
   background-position-x: center;
   background-position-y: center;
@@ -49,16 +48,11 @@ body.dark {
   --color-primary-dark1: #f8f9fa;    // gray
   --color-primary-dark2: #f5f3f4;   // gray
   --color-primary-dark2op: #e9ecef88; // gray opacity 88
-  /* --color-primary-light: #f95738;   // some orange */
-  /* --color-primary-light: #0077b6;   // some blue */
-  /* --color-primary-light: #0081a7;   // some blue */
   --color-primary-light: #457b9d;   // some blue
   --color-primary-lighten1: #151515;  // some white
   --color-primary-lighten2: #24242388; // some white opacity 70
-  /* --color-primary-blue: #1a73e8; // blue */
   --color-primary-blue: #3f51b5; // blue
   --color-primary-blueHover: #303f9f; // blue hover
-  /* --color-extra-light: #24242388; // white opacity 18 */
   --color-extra-light: #00000044; // white opacity 18
   --color-nav: #e9ecef;
   --font-family-cinzel: 'Cinzel Decorative', cursive;
@@ -69,10 +63,6 @@ body.dark {
   --font-w800: 800;
   --transition: all .35s ease-out;
   --minheight: calc(100vh - 17rem);
-  width: 100%;
-  /* background-color: var(--color-primary-dark1); */
-  /* height: fit-content; */
-  /* min-height: 100vh; */
   scroll-behavior: smooth;
   transition: var(--transition);
   background-image: url('/bgLight1.jpg');

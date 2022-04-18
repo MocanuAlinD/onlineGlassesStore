@@ -48,7 +48,7 @@ const Sidebar = ({
   };
 
   return (
-    <div className={styles.container + " p-2 m-0 m-md-3"}>
+    <div className={styles.container + " p-2 m-0 m-md-3 mt-3 mt-md-0"}>
         {/* Search */}
         <div className={styles.mobile__items + " " + styles.mobile__search}>
           <div className={styles.searchContainer + " pb-2"}>
