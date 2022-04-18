@@ -105,8 +105,8 @@ const Footer = () => {
         <h4>J12/462/2022</h4>
       </div>
 
-      <div className={styles.footer__commentsContainer}>
-        <h3 className={styles.footer__commentsTitle}>Recenzii</h3>
+      <div className={styles.footer__commentsContainer + " mt-3 mt-md-1"}>
+        <h3 className={styles.footer__commentsTitle + " m-0 p-0"}>Recenzii</h3>
         <hr
           style={{
             width: "100%",
@@ -116,7 +116,7 @@ const Footer = () => {
         />
 
         <div className={styles.footer__commentsReview}>
-          <div className={styles.footer__imgName}>
+          <div className={styles.footer__imgName + " m-0 p-0 d-flex pb-3 pb-md-2"}>
             {item && (
               <img
                 src={item.picture || "/no-image.png"}
@@ -127,7 +127,7 @@ const Footer = () => {
             )}
 
             {item ? (
-              <h4>{item.name}</h4>
+              <h4 className='m-0 p-0'>{item.name}</h4>
             ) : (
               <Skeleton
                 variant="text"

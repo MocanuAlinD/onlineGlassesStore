@@ -1,38 +1,19 @@
 .recenzii__container {
-  /* min-height: var(--minheight); */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   font-family: var(--font-family-poppins);
-  /* background: coral; */
 }
 
 .recenzii__noSession {
   background: var(--color-primary-dark2op);
   backdrop-filter: blur(5px);
   border: 1px solid var(--color-primary-lighten2);
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-direction: column; */
-  /* padding: 2rem; */
   border-radius: 0.2rem;
-  width: fit-content;
-  /* text-align: center; */
 }
 
 .recenzii__noSession h4 {
-  font-weight: var(--font-w400);
+  font-weight: var(--font-w200);
   color: var(--color-primary-lighten1);
   width: 100%;
-  font-size: 1.2rem;
-}
-
-
-.loginButtonsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-size: 1.1rem;
 }
 
 .recenzii__noSession .googleBtn,
@@ -45,14 +26,13 @@
   color: var(--color-primary-lighten1);
   cursor: pointer;
   display: flex;
-  font-size: 1.5rem;
-  font-weight: var(--font-w400);
-  justify-content: flex-start;
+  font-size: 1.2rem;
+  font-weight: var(--font-w200);
+  justify-content: center;
   margin: 0.5rem 1rem;
   outline: none;
   padding: 0.5rem;
   transition: var(--transition);
-  width: 100%;
 }
 
 .recenzii__noSession button:hover {
@@ -71,64 +51,39 @@
 }
 .recenzii__noSession button:hover .facebookIcon,
 .recenzii__noSession button:hover .googleIcon {
-  transform: scale(1.5) rotateY(0deg);
+  transform: scale(1.5);
 }
 
 /* ====SESSION========================================================= */
 
 .recenzii__session {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background: var(--color-primary-dark2);
   backdrop-filter: blur(5px);
-  padding: 1rem;
   border-radius: 0.2rem;
   border: 1px solid var(--color-primary-lighten2);
   transition: var(--transition);
-}
-
-.recenzii__sessionHeader {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 0.5rem;
+  width: fit-content;
 }
 .recenzii__sessionHeader img {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  margin-right: 0.5rem;
 }
 .recenzii__sessionHeader h4 {
-  font-weight: var(--font-w400);
   color: var(--color-primary-lighten1);
+  font-weight: var(--font-w200);
+  height: 100%;
+  font-size: 1rem;
   transition: var(--transition);
 }
-.recenzii__sessionFooter {
-  display: flex;
-  flex-direction: column;
-}
+
 .recenzii__sessionFooter textarea {
-  resize: none;
-  padding: 0.2rem;
-  color: var(--color-primary-lighten1);
   background: var(--color-primary-dark2);
+  color: var(--color-primary-lighten1);
+  padding: 0.2rem;
+  resize: none;
   transition: var(--transition);
 }
-
-.recenzii__rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.2rem 0;
-}
-.recenzii__rating .recenzii__onlyStars {
-  display: flex;
-}
-
 .recenzii__rating input[type="radio"] {
   display: none;
 }
@@ -137,19 +92,11 @@
   transition: var(--transition);
   margin: 0 0.2rem;
 }
-.recenzii__rating label {
-  display: flex;
-  flex-direction: column;
-}
 .recenzii__rating h4 {
   margin-right: 1rem;
   color: var(--color-primary-lighten1);
   font-weight: var(--font-w400);
-}
-
-.recenzii__bottom {
-  display: flex;
-  flex-direction: column;
+  font-size: 1.1rem;
 }
 .recenzii__bottom button {
   outline: none;
@@ -158,32 +105,23 @@
   color: var(--color-primary-dark2);
   width: fit-content;
   align-self: flex-end;
-  padding: 0.25rem 0.5rem;
+  padding: 0.1rem 0.4rem;
   border-radius: 0.25rem;
   cursor: pointer;
   transition: var(--transition);
 }
 .recenzii__bottom h5 {
   color: var(--color-primary-lighten1);
+  font-size: 1rem;
   font-weight: var(--font-w200);
-  /* background: coral; */
-  text-align: right;
-  padding: 0 0.5rem;
-  margin: 0.25rem 0;
   transition: var(--transition);
 }
 
 @media screen and (max-width: 768px) {
   .recenzii__container {
-    width: 95%;
-    margin: 0 auto;
+    min-height: 75vh;
   }
-  .googleIcon,
-  .facebookIcon {
-    transform: rotateY(0deg);
-  }
-  .recenzii__noSession button:hover .facebookIcon,
-  .recenzii__noSession button:hover .googleIcon {
-    transform: scale(1) rotateY(0deg);
+  .recenzii__noSession h4{
+    font-size: .9rem;
   }
 }

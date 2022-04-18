@@ -1,11 +1,11 @@
 .container{
-    /* min-height: 79vh; */
-    /* padding: 3rem 1rem 1rem 1rem; */
+    min-height: 79vh;
+    padding: 3rem 1rem 1rem 1rem;
     background: var(--color-primary-dark2op);
     /* background: chocolate; */
     backdrop-filter: blur(20px);
-    /* width: 50%; */
-    /* margin: 0 auto; */
+    width: 50%;
+    margin: 0 auto;
     user-select: none;
 }
 
@@ -25,7 +25,8 @@
     text-align: justify;
 }
 .container h3{
-    font-weight: var(--font-w600);
+    font-weight: var(--font-w400);
+    font-size: 1.2rem;
 }
 
 .container p{
@@ -35,8 +36,8 @@
 }
 
 .container h4{
-    font-weight: var(--font-w800);
-    letter-spacing: .1rem;
+    font-weight: var(--font-w400);
+    font-size: 1rem;
 }
 .container h5{
     font-weight: var(--font-w200);

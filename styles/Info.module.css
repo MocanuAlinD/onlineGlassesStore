@@ -6,11 +6,8 @@
     flex-direction: column;
     height: 100%;
     margin: 0 auto;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
     padding: 2rem 1rem 0rem;
-    width: 50%;
+    width: min(100%, 40rem);
 }
 
 .container h4,
@@ -22,6 +19,7 @@
 
 .container h4{
     font-weight: var(--font-w400);
+    font-size: 1.1rem;
 }
 
 .container p{
@@ -30,11 +28,4 @@
     margin-bottom: 1rem;
     margin-left: 1rem;
     /* text-align: left; */
-}
-
-@media screen and (max-width:768px){
-    .container{
-        width: 100%;
-        padding-top: 1rem;
-    }
 }

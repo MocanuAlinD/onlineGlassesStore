@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/recenziiClienti.module.css";
 import firebase from "../firebase";
-import Stars from '../components/Stars'
+import Stars from "../components/Stars";
 
 const RecenziiClienti = () => {
   const [data, setData] = useState([]);
@@ -27,12 +27,12 @@ const RecenziiClienti = () => {
           {data &&
             data.map((item, idx) => (
               <div key={idx} className={styles.reviewItem}>
-                <div className={styles.imageName}>
+                <div className={styles.imageName + " m-0 p-0"}>
                   <img src={item.picture} />
-                  <h4>{item.name}</h4>
+                  <h4 className="m-0 p-0">{item.name}</h4>
                 </div>
-                <h5>&nbsp;&nbsp;&nbsp;&nbsp;{item.review}</h5>
-                <Stars item={item.rating}/>
+                <h5 className='m-0 p-2'>&nbsp;&nbsp;&nbsp;&nbsp;{item.review}</h5>
+                <Stars item={item.rating} />
               </div>
             ))}
         </div>
