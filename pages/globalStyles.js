@@ -6,7 +6,9 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
-
+h3{
+  text-underline-offset: .1rem;
+}
 body {
   --color-primary-dark1: #151515;    // gray
   --color-primary-dark2: #242423;   // gray
@@ -104,6 +106,8 @@ a {
   border-top: 1px solid var(--color-primary-light);
   border-bottom: 1px solid var(--color-primary-light);
 }
+
+
 
 @media screen and (max-width:768px){
   body{

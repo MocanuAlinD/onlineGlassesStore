@@ -6,7 +6,6 @@ import Head from "next/head";
 import LoadingScreen from "../../components/LoadingScreen";
 
 export const getStaticPaths = async () => {
-  // console.log("Paths running!")
   const { data: products_1 } = await commerce.products.list({
     limit: 15,
     category_slug: "1",
@@ -25,12 +24,11 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true
+    fallback: true,
   };
 };
 
 export const getStaticProps = async (context) => {
-  // console.log("Props from id running!")
   const id = context.params.id;
   const singleProduct = await commerce.products.retrieve(id);
 
@@ -44,18 +42,27 @@ const Details = ({ item }) => {
   if (!item) {
     return <LoadingScreen actualizare="Actualizare produs..." />;
   }
-  
+
   const [currentImage, setCurrentImage] = useState(item.media.source);
 
   return (
-    <div className={styles.product__container}>
+    <div
+      className={
+        styles.product__container +
+        " w-100 d-flex justify-content-center align-items-start align-items-md-center"
+      }
+    >
       <Head>
-        {/* <title>{item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</title> */}
         <title>{item.name}</title>
       </Head>
-      <div className={styles.product__midContainer}>
-        <div className={styles.product__imagesContainer}>
-          <div className={styles.product__bigImageContainer} id="slider1">
+      <div
+        className={
+          styles.product__midContainer +
+          " m-0 p-0 d-flex justify-content-center flex-column flex-md-row p-2 p-md-0"
+        }
+      >
+        <div className={styles.product__imagesContainer + " pe-0 pe-md-4"}>
+          <div className={styles.product__bigImageContainer + " "} id="slider1">
             <Image
               layout="intrinsic"
               as="image"
@@ -63,10 +70,14 @@ const Details = ({ item }) => {
               width={1920}
               height={1080}
             />
-            {/* <img src={currentImage}/> */}
           </div>
-          <div className={styles.product__smallImagesContainer}>
-            {item.assets.map((item, index) => (
+          <div
+            className={
+              styles.product__smallImagesContainer +
+              " d-flex py-2 justify-content-start justify-content-md-center gap-1"
+            }
+          >
+            {item.assets.map((item) => (
               <div key={item.id} className={styles.product__smallImage}>
                 <Image
                   src={item.url.slice(20)}
@@ -75,7 +86,6 @@ const Details = ({ item }) => {
                   height={72}
                   onClick={() => setCurrentImage(item.url)}
                 />
-                {/* <img src={item.url} /> */}
               </div>
             ))}
           </div>

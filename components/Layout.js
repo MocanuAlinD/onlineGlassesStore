@@ -14,7 +14,7 @@ const Layout = ({ children, totalItems }) => {
       {!router.pathname.includes("/Produse/[id]") && (
         <Navbar totalItems={totalItems} />
       )}
-      <div className="flex-grow-1 border border-danger d-flex justify-content-center align-items-center">
+      <div className="flex-grow-1 d-flex justify-content-center align-items-center">
         {children}
       </div>
       {router.pathname.includes("/Produse/[id]") ? "" : <Footer />}

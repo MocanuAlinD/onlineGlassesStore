@@ -44,9 +44,6 @@ export async function getStaticProps() {
 
 // =======================================================================
 const Produse = ({ onAddToCart, products }) => {
-  // const temp = JSON.parse(products);
-  // const temp = products;
-  // console.log(temp)
   const listVedere = [];
   const listSoare = [];
   const listAccesorii = [];
@@ -104,7 +101,6 @@ const Produse = ({ onAddToCart, products }) => {
   const changeBrand = () => {
     if (brand === "marcaAll") {
       return allProducts.slice(indexOfFirstPost, indexOfLastPost);
-      // return allProducts
     }
     if (brand !== "marcaAll") {
       return allProducts.filter((m) => {
@@ -195,12 +191,16 @@ const Produse = ({ onAddToCart, products }) => {
   };
 
   return (
-    <div className={styles.produse__container + " h-100"} id="top">
+    <div className={styles.produse__container + " h-100 w-100"} id="top">
       <Head>
         <title>Produse</title>
       </Head>
 
-      <div className={styles.produse__wrapper + " w-100 d-flex flex-column flex-md-row p-0 m-0 "}>
+      <div
+        className={
+          styles.produse__wrapper + " d-flex flex-column flex-md-row p-0 m-0"
+        }
+      >
         <Sidebar
           brand={brand}
           brandNames={brandNames}
@@ -236,24 +236,23 @@ const Produse = ({ onAddToCart, products }) => {
             </h3>
           )}
           {/* Products */}
-          <div className="m-0 p-0 d-flex flex-wrap justify-content-center justify-content-md-start">
-            {search === "" &&
-              changeBrand(allProducts).map((prd) => (
+          {search === "" && (
+            <div className="m-0 p-0 d-flex flex-wrap justify-content-center justify-content-md-start">
+              {changeBrand(allProducts).map((prd) => (
                 <MiniCard onAddToCart={onAddToCart} key={prd.id} produs={prd} />
               ))}
-          </div>
+            </div>
+          )}
 
-          <div className="m-0 p-0 d-flex flex-wrap">
-            {search !== ""
-              ? searchItems().map((prd) => (
-                  <MiniCard
-                    onAddToCart={onAddToCart}
-                    key={prd.id}
-                    produs={prd}
-                  />
-                ))
-              : []}
-          </div>
+          {search !== "" ? (
+            <div className="m-0 p-0 d-flex flex-wrap">
+              {searchItems().map((prd) => (
+                <MiniCard onAddToCart={onAddToCart} key={prd.id} produs={prd} />
+              ))}
+            </div>
+          ) : (
+            []
+          )}
         </div>
       </div>
     </div>
