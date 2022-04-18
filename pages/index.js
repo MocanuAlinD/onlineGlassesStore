@@ -26,26 +26,3 @@ Home.getInitialProps = async () => {
 
   return { allIndexData };
 };
-
-{
-  /* <div
-      className={
-        styles.container + " bg-dark m-0 p-0 d-flex"
-      }
-    >
-      <h4 className="text-white bg-danger">Alin</h4>
-      {/* <div className={styles.img}> */
-}
-{
-  /* <img src="/bg1_169.jpg" alt="BackgroundImage" /> */
-}
-{
-  /* <h4>Noi avem grija de ochii dumneavoastra!</h4> */
-}
-{
-  /* </div> */
-}
-{
-  /* <Card1 indexData={allIndexData} /> */
-}
-// </div>

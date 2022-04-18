@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 
+
 const Layout = ({ children, totalItems }) => {
   const router = useRouter();
   return (
@@ -13,7 +14,9 @@ const Layout = ({ children, totalItems }) => {
       {!router.pathname.includes("/Produse/[id]") && (
         <Navbar totalItems={totalItems} />
       )}
-      <div className="flex-grow-1">{children}</div>
+      <div className="flex-grow-1 border border-danger d-flex justify-content-center align-items-center">
+        {children}
+      </div>
       {router.pathname.includes("/Produse/[id]") ? "" : <Footer />}
     </div>
   );
