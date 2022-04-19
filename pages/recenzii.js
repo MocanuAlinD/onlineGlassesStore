@@ -72,12 +72,12 @@ const Recenzii = () => {
           <div className={styles.recenzii__sessionFooter}>
             <textarea
               name="review"
-              cols="30"
               rows="10"
               spellCheck="false"
               maxLength="100"
               value={text}
               onChange={(e) => checkLen(e.target.value)}
+              className='w-100'
             ></textarea>
             <div className={styles.recenzii__rating + " m-0 p-0 d-flex justify-content-between align-items-center"}>
               <h4 className='m-0 p-0'>Rating</h4>

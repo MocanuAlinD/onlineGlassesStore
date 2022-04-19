@@ -62,7 +62,7 @@
   border-radius: 0.2rem;
   border: 1px solid var(--color-primary-lighten2);
   transition: var(--transition);
-  width: fit-content;
+  width: min(95%, 30rem);
 }
 .recenzii__sessionHeader img {
   width: 2rem;
