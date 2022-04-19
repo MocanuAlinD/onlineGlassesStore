@@ -39,9 +39,3 @@
 .contact__social ul li a:hover{
     color: var(--color-primary-light);
 }
-
-@media screen and (max-height: 768px){
-    .contact__container{
-        min-height: 68vh;
-    }
-}
