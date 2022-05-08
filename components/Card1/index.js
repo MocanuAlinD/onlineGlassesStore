@@ -12,7 +12,7 @@ const Card1 = ({ indexData }) => {
   };
 
   return (
-    <div className={styles.container + ' d-flex p-2 me-3 flex-column align-items-md-end align-items-center'}>
+    <div className={styles.container + ' d-flex p-2 me-3 flex-column align-items-md-end align-items-center m-0 p-0'}>
       <div className={styles.mission + " my-2"}>
         <h3 className='d-flex justify-content-between align-items-center'>
           Misiunea noastra
