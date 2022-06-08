@@ -1,24 +1,18 @@
-// import '../styles/globals.css'
 import ScrollToTop from "../components/ScrollToTop";
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { commerce } from "../lib/commerce";
 import Head from "next/head";
 import GlobalStyle from "./globalStyles";
-import { useRouter } from "next/router";
 import { SessionProvider } from "next-auth/react";
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-  const router = useRouter();
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
 
   const fetchCart = async () => {
     setCart(await commerce.cart.retrieve());
-    console.log("Fetched cart");
   };
 
   const handleAddToCart = async (productId, quantity) => {
@@ -69,7 +63,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   }, []);
 
   return (
-    <>
       <SessionProvider session={session}>
         <GlobalStyle />
         <Head>
@@ -96,7 +89,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           <ScrollToTop />
         </Layout>
       </SessionProvider>
-    </>
   );
 }
 

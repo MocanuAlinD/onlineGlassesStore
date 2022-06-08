@@ -151,7 +151,6 @@ const Produse = ({ onAddToCart, products }) => {
     setCurrentPage(pageNumber);
     let buttons = document.querySelectorAll(".pagination__button");
     if (!buttons.length) return;
-    console.log("Buttons:", buttons.length);
     buttons.forEach((btn) => btn.classList.remove("active"));
     e.target.classList.add("active");
   };

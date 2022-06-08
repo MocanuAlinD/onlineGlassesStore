@@ -78,6 +78,7 @@ const Navbar = ({ totalItems }) => {
         }
       >
         <Link href="/">
+          {/* <h3 className="h-auto m-0 p-0">HORUS TOP OPTIC</h3> */}
           <h3 className="h-auto m-0 p-0">HORUS TOP OPTIC</h3>
         </Link>
       </div>
