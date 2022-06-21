@@ -97,8 +97,6 @@ a {
   border-bottom: 1px solid var(--color-primary-light);
 }
 
-
-
 @media screen and (max-width:768px){
   body{
     background-image: url('/bg13_tall.jpg');
