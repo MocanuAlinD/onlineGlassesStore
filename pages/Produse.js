@@ -90,7 +90,7 @@ const Produse = ({ onAddToCart, products }) => {
   const [def, setDef] = useState("mic");
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const [postsPerPage, setPostsPerPage] = useState(20);
   const [currentPosts, setCurrentPosts] = useState(listVedereLEN);
   const [allProducts, setAllProducts] = useState(listVedere);
   const [brandNames, setBrandNames] = useState(brandNameVedere);

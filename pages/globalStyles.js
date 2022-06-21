@@ -36,12 +36,12 @@ body {
   /* min-height: 100vh; */
   scroll-behavior: smooth;
   transition: var(--transition);
-  background-image: url('/bg13.jpg');
+  /* background-image: url('/bg13.jpg');
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
   background-repeat: repeat-y;
-  background-origin: content-box;
+  background-origin: content-box; */
 }
 
 body.dark {
@@ -65,12 +65,12 @@ body.dark {
   --minheight: calc(100vh - 17rem);
   scroll-behavior: smooth;
   transition: var(--transition);
-  background-image: url('/bgLight1.jpg');
+  /* background-image: url('/bgLight1.jpg');
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
   background-repeat: repeat-y;
-  background-origin: content-box;
+  background-origin: content-box; */
 }
 
 a {
@@ -99,11 +99,11 @@ a {
 
 
 
-@media screen and (max-width:768px){
+/* @media screen and (max-width:768px){
   body{
     background-image: url('/bg13_tall.jpg');
   }
-}
+} */
 `;
 
 export default GlobalStyle;
