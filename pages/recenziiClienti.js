@@ -18,6 +18,7 @@ const RecenziiClienti = () => {
       setData([]);
     };
   }, []);
+  console.log(data[0])
 
   return (
     <div className={styles.container + " w-100 align-self-start d-flex justify-content-center align-items-start"}>
