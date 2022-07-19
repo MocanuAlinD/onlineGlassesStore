@@ -42,6 +42,7 @@ body {
   background-size: cover;
   background-repeat: repeat-y;
   background-origin: content-box;
+  background-attachment: fixed;
 }
 
 body.dark {
@@ -71,6 +72,7 @@ body.dark {
   background-size: cover;
   background-repeat: repeat-y;
   background-origin: content-box;
+  background-attachment: fixed;
 }
 
 a {
@@ -100,6 +102,7 @@ a {
 @media screen and (max-width:768px){
   body{
     background-image: url('/bg13_tall.jpg');
+    /* background-attachment: fixed; */
   }
 }
 `;

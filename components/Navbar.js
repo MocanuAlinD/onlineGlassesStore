@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import style from "../styles/navbar.module.css";
+import styles from "../styles/navbar.module.css";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
@@ -66,20 +66,20 @@ const Navbar = ({ totalItems }) => {
   return (
     <div
       className={
-        style.nav +
+        styles.nav +
         " m-0 p-0 d-flex justify-content-center align-items-center position-sticky top-0"
       }
       id="nav"
     >
       <div
         className={
-          style.nav__title +
+          styles.nav__title +
           " m-0 p-0 h-100 d-flex align-items-center ps-3 flex-grow-1"
         }
       >
         <Link href="/">
           {/* <h3 className="h-auto m-0 p-0">HORUS TOP OPTIC</h3> */}
-          <h3 className="h-auto m-0 p-0">HORUS TOP OPTIC</h3>
+          <h3 className={styles.navTitle + ' h-auto m-0 p-0'}>HORUS TOP OPTIC</h3>
         </Link>
       </div>
       <ul className="m-0 p-0 d-flex flex-grow-1 m-0 p-0 flex-column flex-md-row align-items-start justify-content-start justify-content-md-end gap-4 pt-5 pt-md-0 ">
@@ -121,15 +121,15 @@ const Navbar = ({ totalItems }) => {
         )}
       </ul>
       <div className="">
-        <button className={style.nav__menu + " m-0 w-auto"} onClick={changeMe}>
+        <button className={styles.nav__menu + " m-0 w-auto"} onClick={changeMe}>
           Meniu
         </button>
       </div>
-      <div className={style.nav__cartContainer}>
+      <div className={styles.nav__cartContainer}>
         {router.pathname !== "/Cart" && router.pathname !== "/Checkout" && (
           <Link href="/Cart">
             <IconButton
-              className={style.nav__cartIcon}
+              className={styles.nav__cartIcon}
               aria-label="Show cart items"
               title="Vezi produsele din cos"
             >
@@ -146,14 +146,14 @@ const Navbar = ({ totalItems }) => {
       </div>
 
       <div
-        className={style.theme_color_container}
+        className={styles.theme_color_container}
         onClick={() => changeTheme()}
       >
-        <div className={style.sun}>
+        <div className={styles.sun}>
           {themeIcon === true ? (
-            <BiSun className={style.sunIcon} />
+            <BiSun className={styles.sunIcon} />
           ) : (
-            <BiMoon className={style.sunIcon} />
+            <BiMoon className={styles.sunIcon} />
           )}
         </div>
       </div>
