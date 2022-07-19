@@ -7,32 +7,43 @@ import Head from "next/head";
 import { commerce } from "../lib/commerce";
 
 export async function getStaticProps() {
-  const { data: products_1 } = await commerce.products.list({
-    limit: 200,
-    category_slug: "1",
-    sortBy: "created",
-  });
-  const { data: products_2 } = await commerce.products.list({
-    limit: 200,
-    category_slug: "2",
-    sortBy: "created",
-  });
+  let products = [];
+  try {
+    const { data: products_1 } = await commerce.products.list({
+      limit: 200,
+      category_slug: "1",
+      sortBy: "created",
+    });
+    const { data: products_2 } = await commerce.products.list({
+      limit: 200,
+      category_slug: "2",
+      sortBy: "created",
+    });
+  
+    const both = [...products_1, ...products_2];
+  
+    both.map((item) => {
+      const tempItem = {
+        id: item.id,
+        imgUrl: item.image.url,
+        name: item.name,
+        price: item.price.raw,
+        inventory: item.inventory,
+        categories: item.categories,
+        description: item.description,
+      };
+      products.push(tempItem);
+    });
+  } catch (error) {
+    products= [];
+  }
 
-  const products = [];
-  const both = [...products_1, ...products_2];
-
-  both.map((item) => {
-    const tempItem = {
-      id: item.id,
-      imgUrl: item.image.url,
-      name: item.name,
-      price: item.price.raw,
-      inventory: item.inventory,
-      categories: item.categories,
-      description: item.description,
-    };
-    products.push(tempItem);
-  });
+  if (!products.length) {
+    return {
+      notFound: true,
+    }
+  }
+  
 
   return {
     props: {
@@ -44,6 +55,9 @@ export async function getStaticProps() {
 
 // =======================================================================
 const Produse = ({ onAddToCart, products }) => {
+  // if(!products.length) {
+    // return <h4 className='text-white fs-6 font-monospace'>Intampinam probleme tehnice. Va rugam reveniti curand.</h4>
+  // }
   const listVedere = [];
   const listSoare = [];
   const listAccesorii = [];

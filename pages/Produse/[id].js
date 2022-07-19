@@ -6,21 +6,26 @@ import Head from "next/head";
 import LoadingScreen from "../../components/LoadingScreen";
 
 export const getStaticPaths = async () => {
-  const { data: products_1 } = await commerce.products.list({
-    limit: 15,
-    category_slug: "1",
-  });
-  const { data: products_2 } = await commerce.products.list({
-    limit: 15,
-    category_slug: "2",
-  });
-  const products = [...products_1, ...products_2];
+  let paths;
+  try {
+    const { data: products_1 } = await commerce.products.list({
+      limit: 15,
+      category_slug: "1",
+    });
+    const { data: products_2 } = await commerce.products.list({
+      limit: 15,
+      category_slug: "2",
+    });
+    const products = [...products_1, ...products_2];
 
-  const paths = products.map((item) => {
-    return {
-      params: { id: item.id.toString() },
-    };
-  });
+    paths = products.map((item) => {
+      return {
+        params: { id: item.id.toString() },
+      };
+    });
+  } catch (error) {
+    paths = [];
+  }
 
   return {
     paths,
@@ -29,8 +34,13 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const singleProduct = await commerce.products.retrieve(id);
+  let singleProduct = {};
+  try {
+    const id = context.params.id;
+    singleProduct = await commerce.products.retrieve(id);
+  } catch (error) {
+    singleProduct = {};
+  }
 
   return {
     props: { item: singleProduct },
