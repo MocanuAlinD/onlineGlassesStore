@@ -17,7 +17,17 @@ const Footer = () => {
       Object.values(data)[
         Math.floor(Math.random() * Object.values(data).length)
       ];
-    setItem(oneItem);
+    const itm = new Image()
+    itm.src = oneItem.picture
+    itm.onerror = function () {
+      oneItem.picture = '/notAvailable1.png'
+      setItem(oneItem);
+    }
+    itm.onload = function(){
+      setItem(oneItem);
+    }
+
+    
   };
 
   const nextItem = () => {
@@ -54,17 +64,21 @@ const Footer = () => {
     }
   }, [item, checkTimer]);
 
-
   return (
-    <div className={styles.footer__container + " m-0 p-0 d-flex flex-column mx-auto px-4 py-1 w-100 flex-md-row justify-content-md-center"}>
+    <div
+      className={
+        styles.footer__container +
+        " m-0 p-0 d-flex flex-column mx-auto px-4 py-1 w-100 flex-md-row justify-content-md-center"
+      }
+    >
       <div className={styles.footer__left}>
-        <h3 className='w-100 text-center text-md-start'>Despre</h3>
+        <h3 className="w-100 text-center text-md-start">Despre</h3>
         {/* <hr width="100%" style={{ height: ".1rem", marginBottom: ".5rem" }} /> */}
         <hr
           style={{
             width: "100%",
             height: ".1rem",
-            backgroundColor: 'var(--color-primary-lighten1)',
+            backgroundColor: "var(--color-primary-lighten1)",
             marginBottom: ".5rem",
           }}
         />
@@ -116,23 +130,27 @@ const Footer = () => {
         />
 
         <div className={styles.footer__commentsReview}>
-          <div className={styles.footer__imgName + " m-0 p-0 d-flex pb-3 pb-md-2"}>
-            {item && (
-              <img
-                src={item.picture || "/no-image.png"}
-                alt=""
-                width="25px"
-                height="25px"
+          <div
+            className={styles.footer__imgName + " m-0 p-0 d-flex pb-3 pb-md-2"}
+          >
+            {item ? (
+              <img src={item.picture} alt="" width="25px" height="25px"  />
+            ) : (
+              <Skeleton
+                variant="circular"
+                width={25}
+                height={25}
+                sx={{ bgcolor: "grey.500", marginRight: '.5rem' }}
               />
             )}
 
             {item ? (
-              <h4 className='m-0 p-0'>{item.name}</h4>
+              <h4 className="m-0 p-0">{item.name}</h4>
             ) : (
               <Skeleton
                 variant="text"
-                width={200}
-                height={25}
+                width={170}
+                height={30}
                 sx={{ bgcolor: "grey.500" }}
               />
             )}

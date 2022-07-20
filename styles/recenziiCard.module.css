@@ -1,14 +1,14 @@
 .reviewItem {
   background: var(--color-primary-dark1);
-  border: 1px solid var(--color-extra-light);
   border-radius: .3rem;
+  border: 1px solid var(--color-extra-light);
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family-poppins);
   height: fit-content;
   margin: 0.3rem;
   min-height: 14rem;
   width: 15rem;
-  font-family: var(--font-family-poppins);
 }
 .reviewItem h4,
 .reviewItem h5{
@@ -17,18 +17,18 @@
 }
 
 .reviewItem h5{
-    flex-grow: 1;
-    font-weight: var(--font-w200);
-    font-size: .9rem;
     border-bottom: 1px solid var(--color-primary-lighten1);
+    flex-grow: 1;
+    font-size: .9rem;
+    font-weight: var(--font-w200);
     position: relative;
 }
 
 .imageName img {
-  width: 2rem;
-  height: 2rem;
   border-radius: 50%;
+  height: 2rem;
   margin: .5rem;
+  width: 2rem;
 }
 
 @media screen and (max-width: 768px) {

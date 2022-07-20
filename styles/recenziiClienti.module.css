@@ -1,6 +1,6 @@
 .reviewsContainer {
-  background: var(--color-primary-dark2op);
   backdrop-filter: blur(5px);
+  background: var(--color-primary-dark2op);
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
@@ -9,13 +9,14 @@
 }
 
 .reviewsContainer .title {
-  color: var(--color-primary-lighten1);
-  text-align: center;
-  font-weight: var(--font-w400);
-  font-size: 1.5rem;
-  width: 100%;
   border-bottom: 1px solid var(--color-primary-lighten1);
+  color: var(--color-primary-lighten1);
   font-family: var(--font-family-poppins);
+  font-size: 1.3rem;
+  font-weight: var(--font-w400);
+  letter-spacing: .03rem;
+  text-align: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

@@ -11,11 +11,11 @@ const ReviewCard = ({ item }) => {
       <div
         className={
           styles.imageName +
-          " m-0 p-0 d-flex justify-content-center align-items-center border"
+          " m-0 p-0 d-flex justify-content-start align-items-center"
         }
       >
         <img
-          src={!error ? item.picture : "/no-image.png"}
+          src={!error ? item.picture : "/notAvailable1.png"}
           onError={() => setError(true)}
         />
         <h4 className="m-0 p-0">{item.name}</h4>
