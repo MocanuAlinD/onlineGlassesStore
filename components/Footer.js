@@ -73,7 +73,6 @@ const Footer = () => {
     >
       <div className={styles.footer__left}>
         <h3 className="w-100 text-center text-md-start">Despre</h3>
-        {/* <hr width="100%" style={{ height: ".1rem", marginBottom: ".5rem" }} /> */}
         <hr
           style={{
             width: "100%",
@@ -115,8 +114,8 @@ const Footer = () => {
         <Link href="/Garantie">
           <a>Garantie</a>
         </Link>
-        <h4>CUI: 30762979</h4>
-        <h4>J12/462/2022</h4>
+        <h4>CUI: 12345678</h4>
+        <h4>J11/345/2022</h4>
       </div>
 
       <div className={styles.footer__commentsContainer + " mt-3 mt-md-1"}>
