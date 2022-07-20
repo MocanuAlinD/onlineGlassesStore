@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/recenziiClienti.module.css";
 import firebase from "../firebase";
-import Stars from "../components/Stars";
+import ReviewCard from "../components/ReviewCard";
 
 const RecenziiClienti = () => {
   const [data, setData] = useState([]);
@@ -18,23 +18,16 @@ const RecenziiClienti = () => {
       setData([]);
     };
   }, []);
-  console.log(data[0])
+
 
   return (
-    <div className={styles.container + " w-100 align-self-start d-flex justify-content-center align-items-start"}>
+    <div className="w-100 align-self-start d-flex justify-content-center align-items-start">
       <div className={styles.reviewsContainer}>
         <h4 className={styles.title}>Parerea clientilor</h4>
-        <div className={styles.reviewsCards}>
+        <div className="d-flex flex-wrap justify-content-center">
           {data &&
             data.map((item, idx) => (
-              <div key={idx} className={styles.reviewItem}>
-                <div className={styles.imageName + " m-0 p-0"}>
-                  <img src={item.picture} />
-                  <h4 className="m-0 p-0">{item.name}</h4>
-                </div>
-                <h5 className='m-0 p-2'>&nbsp;&nbsp;&nbsp;&nbsp;{item.review}</h5>
-                <Stars item={item.rating} />
-              </div>
+              <ReviewCard key={idx} item={item} />
             ))}
         </div>
       </div>

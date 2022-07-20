@@ -8,7 +8,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   const [pick, setPick] = useState("ramburs");
   const noOfItems = cart.line_items;
 
-  if (!cart.line_items) return "Loading";
+  if (!cart.line_items) return <h4 className='text-white fs-6 font-monospace'>Loading...</h4>;
 
   return (
     <div
