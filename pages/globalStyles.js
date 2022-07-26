@@ -32,8 +32,6 @@ body {
   --transition: all .35s ease-in-out;
   --minheight: calc(100vh - 17rem);
   background: var(--color-primary-dark2);
-  /* height: fit-content; */
-  /* min-height: 100vh; */
   scroll-behavior: smooth;
   transition: var(--transition);
   background-image: url('/bg13.jpg');
@@ -97,6 +95,17 @@ a {
 	background: linear-gradient(var(--color-primary-dark2), var(--color-primary-light), var(--color-primary-dark2));
   border-top: 1px solid var(--color-primary-light);
   border-bottom: 1px solid var(--color-primary-light);
+}
+
+@media screen and (max-width: 768px){
+  body{
+    background-image: none;
+    background-color: #121212;
+  }
+  body.dark{
+    background-image: none;
+    background-color: var(--color-primary-dark1);
+  }
 }
 
 `;
