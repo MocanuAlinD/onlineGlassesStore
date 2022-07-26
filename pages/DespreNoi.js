@@ -4,9 +4,9 @@ import styles from '../styles/DespreNoi.module.css'
 const DespreNoi = () => {
     return (
         <div className={styles.despreNoiContainer + " m-0 p-0 px-3 py-4"}>
-            <p><strong>&emsp;&emsp;Horus Top Optic</strong> suntem o echipa de specialisti in executarea de ochelari pentru vedere, eliberari retete, determinarea
+            <p><strong>&emsp;&emsp;Online Demo Store</strong> suntem o echipa de specialisti in executarea de ochelari pentru vedere, eliberari retete, determinarea
             dioptriilor, ochelari de soare, ochelari de calculator, accesorii si reparatii specifice. Ne mandrim cu o echipa foarte bine pregatita. 
-            Toate produsele si serviciile companiei noastre sunt controlate si evaluate dupa un plan bine stabilit anterior. Horus Top Optic a derulat mai multe campanii, 
+            Toate produsele si serviciile companiei noastre sunt controlate si evaluate dupa un plan bine stabilit anterior. "Online Demo Store" a derulat mai multe campanii, 
             oferind consultatii oftalmologice gratuite angajatilor unor companii din tara. Suntem dotati cu cele mai performante aparate pentru ca ramele si lentilele pe care le alegeti 
             sa fie in armonie cu chipul dumneavoastra, construind o imagine de succes.</p>
             <p><strong>&emsp;&emsp;Preocuparea</strong> noastră principală este să înțelegem nevoile și așteptările dumneavoastră și împreuna să găsim cea mai bună soluție de corectare a vederii.

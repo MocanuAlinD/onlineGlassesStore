@@ -5,7 +5,7 @@ const Ocupa = () => {
   return (
     <div className={styles.ocupaContainer + " m-0 p-0 px-3 py-5"}>
       <div className={styles.ocupaUnu}>
-        <h3>HORUS TOP OPTIC OFERA SERVICII COMPLETE OPTICA MEDICALA</h3>
+        <h3>ONLINE DEMO STORE OFERA SERVICII COMPLETE OPTICA MEDICALA</h3>
         <ul>
           <li>Ne deplasam la sediul companiei dumneavoastra - GRATUIT</li>
           <li>

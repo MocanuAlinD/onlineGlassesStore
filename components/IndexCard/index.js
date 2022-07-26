@@ -15,14 +15,14 @@ const IndexCard = () => {
     {
       id: 2,
       title: "Consultanță",
-      text: "HORUS TOP OPTIC se adreseaza persoanelor care sunt in cautarea unor servicii prompte si de calitate, totul pentru un pret corect.",
+      text: "ONLINE DEMO STORE se adreseaza persoanelor care sunt in cautarea unor servicii prompte si de calitate, totul pentru un pret corect.",
       button: "Citeste mai mult",
       url: "/Consultanta",
     },
     {
       id: 3,
       title: "Despre noi",
-      text: "HORUS TOP OPTIC desfasoara programul de servicii de optica medicala si protectia vederii pentru angajatii companiilor. Ochelari de vedere, rame, lentile de contact, ochelari de soare.",
+      text: "ONLINE DEMO STORE desfasoara programul de servicii de optica medicala si protectia vederii pentru angajatii companiilor. Ochelari de vedere, rame, lentile de contact, ochelari de soare.",
       button: "Citeste mai mult",
       url: "/DespreNoi",
     },

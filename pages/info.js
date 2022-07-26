@@ -55,7 +55,7 @@ const Info = () => {
                 Foarte importante sunt tratamentele aplicate pe lentile: antireflex, tratament oleofob, 
                 hidrofob, durificare, heliomat, filtru protecție calculator, etc. Prețurile ochelarilor 
                 progresivi mai sunt influentate și de indicii de subțiere a lentilelor progresive, cât și 
-                de numele producatorului de lentile. Programeaza o consultație gratuită la HORUS TOP OPTIC 
+                de numele producatorului de lentile. Programeaza o consultație gratuită la ONLINE DEMO STORE 
                 și  îți vom explica tot ce trebuie să știi despre ochelarii progresivi.</p>
             <hr />
             <h4>De ce lăcrimează ochii în lumina artificială ?</h4>

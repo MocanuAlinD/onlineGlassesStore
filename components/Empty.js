@@ -3,11 +3,11 @@ import React from "react";
 const Empty = () => {
   return (
     <div className="container">
-      <h1>HORUS TOP OPTIC</h1>
+      <h1>ONLINE DEMO STORE</h1>
       <style jsx>
         {`
             .container{
-                // background: red;
+                background: red;
                 width: 100%;
                 height: 79vh;
                 color: white;
