@@ -11,7 +11,7 @@ export default function Home() {
     >
       <div className={styles.img + " d-flex d-md-none m-0 p-0 m-2 mt-4"}>
         <img src="/bg1_169.jpg" alt="BackgroundImage" />
-        <h4 className="m-0 p-0 fs-6 py-1">
+        <h4 className="m-0 p-0 py-1">
           Noi avem grija de ochii dumneavoastra!
         </h4>
       </div>

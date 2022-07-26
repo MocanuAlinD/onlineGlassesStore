@@ -15,20 +15,22 @@
   }
 
   .container .img h4 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: var(--color-primary-light);
-    font-size: 1.5rem;
-    font-family: var(--font-family-poppins);
-    font-weight: var(--font-w400);
+    /* font-size: 1.5rem; */
     background: var(--color-extra-light);
-    text-align: center;
     border-radius: 0 0 0.5rem 0.5rem;
+    bottom: 0;
+    color: var(--color-primary-light);
+    font-family: var(--font-family-poppins);
+    font-size: clamp(.7rem, 4vw, 2rem);
+    /* font-size: 2rem; */
+    font-weight: var(--font-w400);
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
   }
 }
-@media screen and (max-width: 425px) {
+/* @media screen and (max-width: 425px) {
   .container .img h4 {
     font-size: 1.2rem;
   }
@@ -37,4 +39,4 @@
   .container .img h4 {
     font-size: 1rem;
   }
-}
+} */

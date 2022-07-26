@@ -7,7 +7,6 @@ const Empty = () => {
       <style jsx>
         {`
             .container{
-                background: red;
                 width: 100%;
                 height: 79vh;
                 color: white;
