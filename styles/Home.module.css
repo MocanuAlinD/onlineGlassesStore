@@ -5,13 +5,13 @@
 @media screen and (max-width: 768px) {
   .container .img {
     display: flex;
-    width: fit-content;
     position: relative;
+    width: 95%;
   }
 
   .container .img img {
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
   }
 
   .container .img h4 {
