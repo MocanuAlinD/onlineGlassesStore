@@ -16,8 +16,10 @@ const Sidebar = ({
   changePriceName,
   brandNameVedere,
   brandNameSoare,
+  setCurrentCard
 }) => {
   const [src, setSrc] = useState("");
+
 
   const sendCategorie = (e) => {
     changeCat(e);
@@ -47,6 +49,11 @@ const Sidebar = ({
     setSearch("");
   };
 
+
+  const changeCard = (e) => {
+    setCurrentCard(prev => e)
+  }
+
   return (
     <div className={styles.container + " p-2 m-0 m-md-3 mt-3 mt-md-0"}>
         {/* Search */}
@@ -58,7 +65,6 @@ const Sidebar = ({
               type="text"
               className={styles.searchDrop}
               spellCheck="false"
-              // onChange={(e) => setSearch(e.target.value.toLowerCase())}
               onChange={(e) => setSrc(e.target.value.toLowerCase())}
               value={src}
             />
@@ -134,6 +140,11 @@ const Sidebar = ({
           </select>
         </div>
        
+
+       <div className={styles.buttonsContainer + " m-0 p-0 mt-2 w-100 d-flex justify-content-end justify-content-md-between align-items-center"}>
+        <button onClick={()=> changeCard("small")}>Small</button>
+        <button onClick={()=> changeCard("large")}>Large</button>
+       </div>
     </div>
   );
 };

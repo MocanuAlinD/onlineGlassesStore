@@ -94,15 +94,24 @@
   font-size: 0.8rem;
   font-weight: var(--font-w200);
 }
+
 .mobile__items h4 {
   color: var(--color-primary-lighten1);
   font-size: 0.9rem;
   font-weight: var(--font-w200);
 }
 
+.buttonsContainer button{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--color-primary-lighten1);
+  margin: 0 .5rem;
+}
+
+
 @media screen and (max-width: 768px) {
   .container {
-    /* border: 1px solid green; */
     display: flex;
     flex-wrap: wrap;
     width: 100%;

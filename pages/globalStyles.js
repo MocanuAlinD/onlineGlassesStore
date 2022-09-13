@@ -30,7 +30,8 @@ body {
   --font-w600: 600;
   --font-w800: 800;
   --transition: all .35s ease-in-out;
-  --minheight: calc(100vh - 17rem);
+  --time: .3s;
+  /* --minheight: calc(100vh - 17rem); */
   background: var(--color-primary-dark2);
   scroll-behavior: smooth;
   transition: var(--transition);
@@ -61,7 +62,8 @@ body.dark {
   --font-w600: 600;
   --font-w800: 800;
   --transition: all .35s ease-out;
-  --minheight: calc(100vh - 17rem);
+  --time: .3s;
+  /* --minheight: calc(100vh - 17rem); */
   scroll-behavior: smooth;
   transition: var(--transition);
   background-image: url('/bgLight1.jpg');

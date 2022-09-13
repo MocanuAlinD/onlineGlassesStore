@@ -1,0 +1,124 @@
+
+.container {
+  width: min(95%, 20rem);
+  aspect-ratio: 16 / 9;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 3000px;
+  transition: all .5s ease-in-out;
+  /* overflow: hidden; */
+  box-shadow: -2px 0 0px var(--color-primary-light);
+}
+
+.imageContainer {
+  aspect-ratio: 16 / 9;
+  transition: all .3s ease-out;
+  transform-origin: right;
+  z-index: 1;
+  /* opacity: .2; */
+  filter: brightness(1);
+}
+
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary-lighten1);
+  z-index: 0;
+  transform: rotateY(-92deg);
+  transform-origin: right;
+  transition: all .35s ease-in-out;
+  transition-delay: .5s;
+}
+
+.container:hover .bg{
+  transform: rotateY(0);
+}
+
+.pContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: var(--color-primary-dark1);
+  transition: all .32s ease-out;
+  transform: rotateY(90deg);
+  transform-origin: left;
+  transition-delay: .3s;
+  padding-left: .35rem;
+  opacity: .9;
+}
+
+.container .pContainer p{
+  font-weight: 400;
+  font-size: .75rem;
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary-lighten1);
+  /* align-self: flex-start; */
+  font-family: Poppins, sans-serif;
+  white-space: nowrap;
+  transition: all .35s ease-in-out;
+  opacity: 0;
+}
+
+.container:hover .imageContainer{
+  transform: rotateY(90deg);
+  filter: brightness(.5);
+}
+
+.container:hover .pContainer{
+  transform: rotateX(0);
+}
+
+.container:hover .pContainer p:nth-child(1){
+  transition-delay: .4s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(2){
+  transition-delay: .45s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(3){
+  transition-delay: .5s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(4){
+  transition-delay: .55s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(5){
+  transition-delay: .6s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(6){
+  transition-delay: .65s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(7){
+  transition-delay: .7s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(8){
+  transition-delay: .75s;
+  opacity: 1;
+}
+
+.container:hover .pContainer p:nth-child(9){
+  transition-delay: .7s;
+  opacity: 1;
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Produse.module.css";
 import MiniCard from "../components/MiniCard";
+import MiniCardBig from "../components/MiniCardBig";
 import Sidebar from "../components/Sidebar";
 import Pagination from "../components/Pagination";
 import Head from "next/head";
@@ -19,9 +20,9 @@ export async function getStaticProps() {
       category_slug: "2",
       sortBy: "created",
     });
-  
+
     const both = [...products_1, ...products_2];
-  
+
     both.map((item) => {
       const tempItem = {
         id: item.id,
@@ -35,15 +36,14 @@ export async function getStaticProps() {
       products.push(tempItem);
     });
   } catch (error) {
-    products= [];
+    products = [];
   }
 
   if (!products.length) {
     return {
       notFound: true,
-    }
+    };
   }
-  
 
   return {
     props: {
@@ -56,7 +56,7 @@ export async function getStaticProps() {
 // =======================================================================
 const Produse = ({ onAddToCart, products }) => {
   // if(!products.length) {
-    // return <h4 className='text-white fs-6 font-monospace'>Intampinam probleme tehnice. Va rugam reveniti curand.</h4>
+  // return <h4 className='text-white fs-6 font-monospace'>Intampinam probleme tehnice. Va rugam reveniti curand.</h4>
   // }
   const listVedere = [];
   const listSoare = [];
@@ -108,6 +108,8 @@ const Produse = ({ onAddToCart, products }) => {
   const [currentPosts, setCurrentPosts] = useState(listVedereLEN);
   const [allProducts, setAllProducts] = useState(listVedere);
   const [brandNames, setBrandNames] = useState(brandNameVedere);
+
+  const [currentCard, setCurrentCard] = useState("MiniCard");
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -204,7 +206,10 @@ const Produse = ({ onAddToCart, products }) => {
   };
 
   return (
-    <div className={styles.produse__container + " w-100 mt-2 align-self-start"} id="top">
+    <div
+      className={styles.produse__container + " w-100 mt-3 align-self-start"}
+      id="top"
+    >
       <Head>
         <title>Produse</title>
       </Head>
@@ -223,9 +228,11 @@ const Produse = ({ onAddToCart, products }) => {
           setBrandNames={setBrandNames}
           brandNameVedere={brandNameVedere}
           brandNameSoare={brandNameSoare}
+          setCurrentCard={setCurrentCard}
         />
 
-        <div className={styles.produse__list + " flex-grow-1"}>
+        {/* <div className={styles.produse__list + " flex-grow-1"}> */}
+        <div className={styles.produse__list + " w-100"}>
           {search === "" && brand === "marcaAll" && (
             <Pagination
               setPostsPerPage={setPostsPerPage}
@@ -250,17 +257,41 @@ const Produse = ({ onAddToCart, products }) => {
           {/* Products */}
           {search === "" && (
             <div className="m-0 p-0 d-flex flex-wrap justify-content-center justify-content-md-start">
-              {changeBrand(allProducts).map((prd) => (
-                <MiniCard onAddToCart={onAddToCart} key={prd.id} produs={prd} />
-              ))}
+              {currentCard === "large"
+                ? changeBrand(allProducts).map((prd) => (
+                    <MiniCardBig
+                      onAddToCart={onAddToCart}
+                      key={prd.id}
+                      produs={prd}
+                    />
+                  ))
+                : changeBrand(allProducts).map((prd) => (
+                    <MiniCard
+                      onAddToCart={onAddToCart}
+                      key={prd.id}
+                      produs={prd}
+                    />
+                  ))}
             </div>
           )}
 
           {search !== "" ? (
             <div className="m-0 p-0 d-flex flex-wrap">
-              {searchItems().map((prd) => (
-                <MiniCard onAddToCart={onAddToCart} key={prd.id} produs={prd} />
-              ))}
+              {currentCard === "large"
+                ? searchItems().map((prd) => (
+                    <MiniCardBig
+                      onAddToCart={onAddToCart}
+                      key={prd.id}
+                      produs={prd}
+                    />
+                  ))
+                : searchItems().map((prd) => (
+                    <MiniCard
+                      onAddToCart={onAddToCart}
+                      key={prd.id}
+                      produs={prd}
+                    />
+                  ))}
             </div>
           ) : (
             []
