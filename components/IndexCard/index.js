@@ -1,7 +1,7 @@
 import React from "react";
 import Arrows from "../Arrows";
 import Link from "next/link";
-import styles from "../../styles/IndexCard.module.css";
+import styles from "../../styles/components/IndexCard.module.css";
 
 const IndexCard = () => {
   const INDEX_DATA = [

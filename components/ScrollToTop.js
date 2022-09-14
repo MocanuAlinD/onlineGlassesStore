@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "../styles/Top.module.css";
+import styles from "../styles/components/Top.module.css";
 import { BsArrowBarUp } from "react-icons/bs";
 
 export default class ScrollToTop extends Component {

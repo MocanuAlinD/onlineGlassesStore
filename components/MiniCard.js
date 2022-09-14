@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/MiniCard.module.css";
+import styles from "../styles/components/MiniCard.module.css";
 import Image from "next/image";
 import { IconButton } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";

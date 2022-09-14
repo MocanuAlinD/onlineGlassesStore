@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from "../styles/navbar.module.css";
+import styles from "../styles/components/navbar.module.css";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";

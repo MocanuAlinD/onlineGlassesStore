@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/MiniCardBig.module.css";
+import styles from "../styles/components/MiniCardBig.module.css";
 import Image from "next/image";
 import { IconButton } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/Footer.module.css";
+import styles from "../styles/components/Footer.module.css";
 import { AiOutlinePlayCircle, AiOutlinePauseCircle } from "react-icons/ai";
 import { BiSkipNext } from "react-icons/bi";
 import Link from "next/link";

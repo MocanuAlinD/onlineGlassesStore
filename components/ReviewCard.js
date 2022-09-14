@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Stars from "../components/Stars";
-import styles from "../styles/recenziiCard.module.css";
+import styles from "../styles/components/recenziiCard.module.css";
 
 const ReviewCard = ({ item }) => {
   const [error, setError] = useState(false);
