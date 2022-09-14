@@ -89,7 +89,7 @@ a {
   -moz-border: 1px solid var(---color-primary-light);
   -o-border: 1px solid var(---color-primary-light);
 	border: 1px solid var(--color-primary-light);
-	box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,0.5);
+	box-shadow: inset 0 0 2px 2px rgba(0,0,0,0.5);
   background: var(--color-primary-dark2);
 }
 

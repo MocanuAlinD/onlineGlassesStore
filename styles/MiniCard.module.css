@@ -87,18 +87,14 @@
 .miniCard__container .h5tag {
   margin-bottom: 2rem;
   font-weight: var(--font-w200);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 /* Top left - Price*/
 .miniCard__container .miniCard__pret {
   align-items: center;
   backdrop-filter: blur(3px);
-  background: linear-gradient(
-    160deg,
-    var(--color-primary-dark2) 35%,
-    transparent
-  );
+  background: linear-gradient( 160deg, var(--color-primary-dark2) 35%, transparent );
   border-top: 0.2rem solid var(--color-primary-light);
   border-left: 0.2rem solid var(--color-primary-light);
   border-radius: 50%;
@@ -146,27 +142,23 @@
 }
 
 .miniCard__container .miniCard__details a {
-  color: var(--color-primary-lighten1);
-  position: absolute;
+  border-radius: 0.3rem;
   bottom: -0.3rem;
-  left: 0;
+  color: var(--color-primary-lighten1);
+  cursor: pointer;
   font-family: var(--font-family-poppins);
   font-size: 1.5rem;
-  /* width: 3rem; */
-  text-align: center;
   font-weight: var(--font-w400);
-  /* border: 1px solid var(--color-primary-light); */
-  /* padding: 0.01rem 0.5rem; */
-  /* background: red; */
-  border-radius: 0.3rem;
-  cursor: pointer;
+  left: 0;
+  position: absolute;
+  text-align: center;
   transition: var(--transition);
 }
 
 @media screen and (max-width: 768px) {
   .miniCard__container {
-    width: 47%;
     height: fit-content;
+    width: 47%;
   }
   .miniCard__container:hover {
     box-shadow: none;
@@ -184,33 +176,37 @@
     letter-spacing: 0.3rem;
   }
   .miniCard__container .miniCard__pret {
-  align-items: center;
-  backdrop-filter: blur(3px);
-  background: linear-gradient(160deg, var(--color-primary-dark2) 35%, transparent);
-  border-top: .2rem solid var(--color-primary-light);
-  border-left: .2rem solid var(--color-primary-light);
-  border-radius: 50%;
-  box-shadow: 0px .3rem .6rem .1rem var(--color-primary-dark2op);
-  color: var(--color-primary-lighten1);
-  display: flex;
-  font-family: var(--font-family-poppins);
-  font-size: 1rem;
-  font-weight: var(--font-w400);
-  height: 2.5rem;
-  justify-content: center;
-  left: 50%;
-  pointer-events: none;
-  position: absolute;
-  top: -1rem;
-  text-align: center;
-  transition: var(--transition);
-  transform: translateX(-50%);
-  width: 2.5rem;
-}
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(
+      160deg,
+      var(--color-primary-dark2) 35%,
+      transparent
+    );
+    border-top: 0.2rem solid var(--color-primary-light);
+    border-left: 0.2rem solid var(--color-primary-light);
+    border-radius: 50%;
+    box-shadow: none;
+    color: var(--color-primary-lighten1);
+    display: flex;
+    font-family: var(--font-family-poppins);
+    font-size: 1rem;
+    font-weight: var(--font-w400);
+    height: 2.5rem;
+    justify-content: center;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: -1rem;
+    text-align: center;
+    transition: var(--transition);
+    transform: translateX(-50%);
+    width: 2.5rem;
+  }
 }
 
-@media screen and (max-width: 576px){
-  .miniCard__container{
+@media screen and (max-width: 576px) {
+  .miniCard__container {
     width: 95%;
   }
 }

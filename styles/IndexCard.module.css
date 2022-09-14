@@ -1,5 +1,5 @@
 .mission {
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
   background: none;
   border-bottom: 1px solid var(--color-primary-lighten2);
   border-left: 1px solid var(--color-primary-lighten2);
@@ -43,7 +43,7 @@
 }
 
 .cards {
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
   border-bottom: 1px solid var(--color-primary-lighten2);
   border-left: 1px solid var(--color-primary-lighten2);
   border-radius: 0.3rem;

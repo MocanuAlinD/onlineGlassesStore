@@ -3,8 +3,7 @@ import Stars from "../components/Stars";
 import styles from "../styles/recenziiCard.module.css";
 
 const ReviewCard = ({ item }) => {
-  
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
 
   return (
     <div className={styles.reviewItem}>

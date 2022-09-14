@@ -109,6 +109,19 @@
   margin: 0 .5rem;
 }
 
+.arrows{
+  cursor: pointer;
+  color: var(--color-primary-lighten1);
+  transition: var(--transition);
+  font-size: 1rem;
+}
+.arrows:nth-child(2){
+  font-size: 1.5rem;
+}
+.arrows:hover{
+  color: var(--color-primary-light);
+}
+
 
 @media screen and (max-width: 768px) {
   .container {

@@ -1,22 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/MiniCardBig.module.css";
 import Image from "next/image";
 import { IconButton } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
-import Link from "next/link";
-import { FiMoreHorizontal } from "react-icons/fi";
 
-
-// style for pret
-// order them nicely
 const MiniCardBig = ({ produs, onAddToCart }) => {
   return (
-    <div className={styles.container + " d-flex flex-column m-3"}>
-      <div className={styles.bg}>
-        <div className={styles.leftSideBg}>
+    <div className={styles.container + " m-0 p-0 m-2 d-flex flex-column"}>
+      <div className={styles.bg} secondbg={"no-image.png"}>
+        <div className={styles.rightSideBg}>
           <h4 className={styles.title}>{produs.name}</h4>
-          <h5 className={styles.pret}>
-            Pret: {produs.price ? produs.price + " lei" : "-"}
+          <h5 className={styles.pret + " fs-3 text-decoration-underline"}>
+            {produs.price ? produs.price + " lei" : "-"}
           </h5>
           <div className={styles.stoc}>
             <h5 className={styles.inventory}>
@@ -54,19 +49,19 @@ const MiniCardBig = ({ produs, onAddToCart }) => {
           </div>
         </div>
       </div>
+
       <div className={styles.imageContainer}>
         <Image
           layout="fill"
           priority
           as="image"
           src={produs.imgUrl.slice(20)}
+          placeholder="blur"
+          blurDataURL="no-image.png"
         />
       </div>
       <div className={styles.pContainer}>
-        <p
-          className={styles.description}
-          dangerouslySetInnerHTML={{ __html: produs.description }}
-        ></p>
+        <p dangerouslySetInnerHTML={{ __html: produs.description }}></p>
       </div>
     </div>
   );

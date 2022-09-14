@@ -78,7 +78,7 @@ const Navbar = ({ totalItems }) => {
         }
       >
         <Link href="/">
-          <h3 className='h-auto m-0 p-0'>ONLINE DEMO STORE</h3>
+          <h3 className="h-auto m-0 p-0">ONLINE DEMO STORE</h3>
         </Link>
       </div>
       <ul className="m-0 p-0 d-flex flex-grow-1 m-0 p-0 flex-column flex-md-row align-items-start justify-content-start justify-content-md-end gap-4 pt-5 pt-md-0 ">
@@ -150,9 +150,9 @@ const Navbar = ({ totalItems }) => {
       >
         <div className={styles.sun}>
           {themeIcon === true ? (
-            <BiSun className={styles.sunIcon} />
-          ) : (
             <BiMoon className={styles.sunIcon} />
+          ) : (
+            <BiSun className={styles.sunIcon} />
           )}
         </div>
       </div>

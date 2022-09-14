@@ -15,14 +15,12 @@
   }
 
   .container .img h4 {
-    /* font-size: 1.5rem; */
     background: var(--color-extra-light);
     border-radius: 0 0 0.5rem 0.5rem;
     bottom: 0;
     color: var(--color-primary-light);
     font-family: var(--font-family-poppins);
     font-size: clamp(.7rem, 4vw, 2rem);
-    /* font-size: 2rem; */
     font-weight: var(--font-w400);
     left: 0;
     position: absolute;
@@ -30,13 +28,3 @@
     width: 100%;
   }
 }
-/* @media screen and (max-width: 425px) {
-  .container .img h4 {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (max-width: 375px) {
-  .container .img h4 {
-    font-size: 1rem;
-  }
-} */
