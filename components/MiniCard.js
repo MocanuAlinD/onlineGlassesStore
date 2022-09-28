@@ -8,8 +8,12 @@ import { FiMoreHorizontal } from "react-icons/fi";
 
 const MiniCard = ({ produs, onAddToCart }) => {
   return (
-    <div className={styles.miniCard__container + " d-flex flex-column p-1 m-2 mt-3"}>
-      <Image
+    <div
+      className={
+        styles.miniCard__container + " d-flex flex-column p-1 m-2 mt-3"
+      }
+    >
+      {/* <Image
         layout="intrinsic"
         priority
         as="image"
@@ -17,7 +21,20 @@ const MiniCard = ({ produs, onAddToCart }) => {
         width={768}
         height={432}
         className={styles.image}
-      />
+        placeholder="blur"
+        blurDataURL="no-image.png"
+      /> */}
+      <div className={styles.image_container}>
+      <Image
+          layout="fill"
+          priority
+          as="image"
+          src={produs.imgUrl.slice(20)}
+          placeholder="blur"
+          blurDataURL="no-image.png"
+        />
+      </div>
+
       <h4>{produs.name}</h4>
       <h5 className={styles.miniCard__pret}>
         {produs.price ? produs.price : "-"}
@@ -25,15 +42,13 @@ const MiniCard = ({ produs, onAddToCart }) => {
 
       <hr className={styles.miniCard__divider} />
       <h5 className={styles.h5tag}>
-        {!produs.inventory.managed ? (
-          "In stoc"
-        ) : produs.inventory.available < 1 ? (
-          "Doar cu precomanda"
-        ) : produs.inventory.available < 4 ? (
-          "Stoc limitat"
-        ) : (
-          "In stoc"
-        )}{" "}
+        {!produs.inventory.managed
+          ? "In stoc"
+          : produs.inventory.available < 1
+          ? "Doar cu precomanda"
+          : produs.inventory.available < 4
+          ? "Stoc limitat"
+          : "In stoc"}{" "}
       </h5>
 
       {!produs.inventory.managed ? (

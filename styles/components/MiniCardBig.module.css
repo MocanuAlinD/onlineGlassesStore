@@ -16,7 +16,6 @@
 .imageContainer {
   aspect-ratio: 16 / 9;
   filter: brightness(1);
-  /* opacity: .2; */
   position: relative;
   transform-origin: right;
   transition: all 0.25s ease-out;
