@@ -39,7 +39,8 @@ const PaymentForm = ({ timeout, checkoutToken, backStep, onCaptureCheckout, ship
                 },
                 fulfillment: { shipping_method: shippingData.shippingOption },
                 payment: {
-                    gateway: 'stripe',
+                    // gateway: 'stripe',
+                    gateway: 'gway_3wpgx6AxB3rZlY',
                     stripe: {
                         payment_method_id: paymentMethod.id,
                     }

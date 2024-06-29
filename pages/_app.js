@@ -51,6 +51,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         checkoutTokenId,
         newOrder
       );
+      console.log("newOrder", newOrder)
+      console.log("incoming order", incomingOrder)
       setOrder(incomingOrder);
       refreshCart();
     } catch (error) {
